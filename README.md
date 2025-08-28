@@ -37,7 +37,7 @@ The first step for passwordless authentication is generating an RSA key pair usi
 ssh-keygen
 ```
 
-*(Image: `keygen.png`)*  
+![1](keygen.png)
 
 This creates a **private key** (`id_rsa`) and a **public key** (`id_rsa.pub`) inside the `.ssh` directory.
 
@@ -53,14 +53,13 @@ After this step, you can log in without entering a password.
 ssh-copy-id abdoomo@192.168.125.131
 ssh abdoomo@192.168.125.131
 ```
-*(Image: `copy-id-for-abdoomo.png`)*
-
+![2](copy-id-for-abdoomo.png) 
 ### **For VM2 (`192.168.125.130`, user: `ahmed`)**
 ```bash
 ssh-copy-id ahmed@192.168.125.130
 ssh ahmed@192.168.125.130
 ```
-*(Image: `copy-id-for-ahmed.png`)*
+![3](copy-id-for-ahmed.png) 
 
 ✅ Now passwordless SSH access is configured on **all VMs**.
 
@@ -82,7 +81,7 @@ debian1 ansible_host=192.168.125.131 ansible_user=abdoomo
 debian-cloned ansible_host=192.168.125.130 ansible_user=ahmed
 ```
 
-*(Image: `cat-hosts.png`)*
+![4](cat-hosts.png) 
 
 ---
 
@@ -104,7 +103,7 @@ debian1 | SUCCESS => { "ping": "pong" }
 debian-cloned | SUCCESS => { "ping": "pong" }
 ```
 
-*(Images: `ansible-bing-on-debian1.png`, `ping-on-2-machines.png`)*  
+![5](ansible-bing-on-debian1.png) 
 
 
 - Configured Ansible inventory with host IPs and users.  
