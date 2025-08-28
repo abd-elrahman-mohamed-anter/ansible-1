@@ -103,7 +103,7 @@ debian1 | SUCCESS => { "ping": "pong" }
 debian-cloned | SUCCESS => { "ping": "pong" }
 ```
 
-![5](ansible-bing-on-debian1.png) 
+![5](ping-on-2-machines.png) 
 
 
 - Configured Ansible inventory with host IPs and users.  
