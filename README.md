@@ -8,7 +8,7 @@ This document explains the process of configuring passwordless SSH access for mu
 
 ---
 
-## **1. Initial SSH Access (with Password)**
+## **1. Initial SSH Access (with Password) to get the IP**
 
 Before configuring passwordless SSH, you first connect manually to each VM using SSH.  
 At this stage, the server still requires you to enter the **user password**.
